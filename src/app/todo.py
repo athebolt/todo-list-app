@@ -1,6 +1,8 @@
 import json
 import os
 from importlib import resources
+from rich import print
+
 
 TASKS_FILE = resources.files("app.data").joinpath("tasks.json")
 
@@ -76,12 +78,12 @@ def main():
     tasks = load_tasks()
 
     while True:
-        print("\n==== To-Do List Menu ====")
-        print("1. View tasks")
-        print("2. Add a task")
-        print("3. Mark task as complete")
-        print("4. Delete a task")
-        print("5. Exit")
+        print("\n[grey37]==== To-Do List Menu ====[/grey37]")
+        print("[grey37][bold]1.[/bold] View tasks[/grey37]")
+        print("[grey37][bold]2.[/bold] Add a task[/grey37]")
+        print("[grey37][bold]3.[/bold] Mark task as complete[/grey37]")
+        print("[grey37][bold]4.[/bold] Delete a task[/grey37]")
+        print("[grey37][bold]5.[/bold] Exit[/grey37]")
 
         choice = input("Select an option (1-5): ").strip()
 
